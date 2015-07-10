@@ -98,8 +98,8 @@
 
     function showImageStories(images, timeout) {
         timeout = timeout || 3000;
-        if (timeout < 2000) {
-            timeout = 2000;
+        if (timeout < 3000) {
+            timeout = 3000;
         }
 
         var defer = $.Deferred();
