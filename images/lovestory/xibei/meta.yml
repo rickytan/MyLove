@@ -1,0 +1,116 @@
+# -*- mode: yaml; fill-column: 80 -*-
+---
+
+position:
+  latitude: 36.624172
+  longitude: 101.788006
+
+zoom: 10
+
+images:
+  - image: images/lovestory/xibei/1.jpg
+    date: 2014/06
+    latitude: 34.753251
+    longitude: 113.667281
+    description: 火车上的苦逼
+
+  - image: images/lovestory/xibei/2.jpg
+    date: 2014/06
+    latitude: 36.742244
+    longitude: 100.787147
+    description: 再出发
+
+  - image: images/lovestory/xibei/3.jpg
+    date: 2014/06
+    latitude: 36.624971
+    longitude: 100.283377
+    description: 旅店
+
+  - image: images/lovestory/xibei/4.jpg
+    date: 2014/06
+    latitude: 36.734956
+    longitude: 99.786362
+    description: 又出发
+
+  - image: images/lovestory/xibei/5.jpg
+    date: 2014/06
+    latitude: 37.07179
+    longitude: 100.699041
+    description: .
+
+  - image: images/lovestory/xibei/7.jpg
+    date: 2014/06
+    latitude: 36.558325
+    longitude: 100.587076
+    description: .
+
+  - image: images/lovestory/xibei/8.jpg
+    date: 2014/06
+    latitude: 36.667479
+    longitude: 99.982696
+    description: .
+
+  - image: images/lovestory/xibei/9.jpg
+    date: 2014/06
+    latitude: 36.667479
+    longitude: 99.982696
+    description: .
+        
+  - image: images/lovestory/xibei/6.jpg
+    date: 2014/06
+    latitude: 40.174272
+    longitude: 94.792435
+    description: 敦煌
+
+  - image: images/lovestory/xibei/10.jpg
+    date: 2014/06
+    latitude: 40.10469
+    longitude: 94.705407
+    description: .
+
+  - image: images/lovestory/xibei/11.jpg
+    date: 2014/06
+    latitude: 40.10469
+    longitude: 94.705407
+    description: .
+
+  - image: images/lovestory/xibei/12.jpg
+    date: 2014/06
+    latitude: 40.10469
+    longitude: 94.705407
+    description: 画圈圈诅咒你
+
+  - image: images/lovestory/xibei/13.jpg
+    date: 2014/06
+    latitude: 40.338778
+    longitude: 93.255095
+    description: .
+
+  - image: images/lovestory/xibei/14.jpg
+    date: 2014/06
+    latitude: 40.338778
+    longitude: 93.255095
+    description: .
+
+story:
+  - “去趟大西北吧”
+  - “好哇”
+  - 一路上
+  - 有山
+  - 有海
+  - 有牛
+  - 有云
+  - 有沙漠
+  - 有美味
+  - ……
+  - ……
+  - 青海湖
+  - 敦煌
+  - 鸣沙山
+  - 莫高窟
+  - 大漠孤烟
+  - 长河落日
+  - ……
+  - 秦兵马俑
+  - 西安小吃
+  - 一切美好都太短暂！

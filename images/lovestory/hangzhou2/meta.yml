@@ -1,0 +1,59 @@
+# -*- mode: yaml; fill-column: 80 -*-
+---
+
+position:
+  latitude: 30.25
+  longitude: 120.1667
+
+zoom: 11
+
+images:
+  - image: images/lovestory/hangzhou2/1.jpg
+    date: 2007/10
+    latitude: 30.166
+    longitude: 120.208
+    description: 动漫节
+
+  - image: images/lovestory/hangzhou2/2.jpg
+    date: 2007/07
+    latitude: 30.334
+    longitude: 119.528
+    description: 东天目山
+
+  - image: images/lovestory/hangzhou2/3.jpg
+    date: 2008/04
+    latitude: 30.491
+    longitude: 119.666
+    description: 人不在一起，心也要在一起
+
+  - image: images/lovestory/hangzhou2/4.jpg
+    date: 2008/06
+    latitude: 30.258
+    longitude: 120.127
+    description: 闷骚男约她出来玩却不知道聊什么……
+
+  - image: images/lovestory/hangzhou2/5.jpg
+    date: 2008/09
+    latitude: 30.196
+    longitude: 120.023
+    description: 毅行路上一起走过
+
+  - image: images/lovestory/hangzhou2/6.jpg
+    date: 2008/09
+    latitude: 30.232283
+    longitude: 120.207956
+    description: 烟花一起看过
+
+  - image: images/lovestory/hangzhou2/7.jpg
+    date: 2008/09
+    latitude: 30.232
+    longitude: 120.207
+    description: 再平常的故事发生在美丽的杭州也变得难忘
+
+
+story:
+  - 更多的故事是在旅途中发生的
+  - 没钱的时候，邀你游杭州
+  - 有点钱了一起游周边
+  - 两个人在一起
+  - 时间总是不够

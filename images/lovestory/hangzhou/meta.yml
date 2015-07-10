@@ -1,0 +1,85 @@
+# -*- mode: yaml; fill-column: 80 -*-
+---
+
+position:
+  latitude: 30.25
+  longitude: 120.1667
+
+zoom: 11
+
+images:
+  - image: images/lovestory/hangzhou/1.jpg
+    date: 2007/10
+    latitude: 30.27
+    longitude: 120.13
+    description: 这是黑人与白人
+
+  - image: images/lovestory/hangzhou/2.jpg
+    date: 2007/07
+    latitude: 30.258
+    longitude: 120.126
+    description: 小胖纸
+
+  - image: images/lovestory/hangzhou/3.jpg
+    date: 2008/04
+    latitude: 30.234
+    longitude: 120.141
+    description: 跟死瘦子
+
+  - image: images/lovestory/hangzhou/4.jpg
+    date: 2008/06
+    latitude: 30.166
+    longitude: 120.208
+    description: 闷骚不会哄人的工科男
+
+  - image: images/lovestory/hangzhou/5.jpg
+    date: 2008/09
+    latitude: 30.166
+    longitude: 120.208
+    description: 与爱哭鬼的故事
+
+  - image: images/lovestory/hangzhou/6.jpg
+    date: 2008/09
+    latitude: 30.290
+    longitude: 120.172
+    description: 他们相识
+
+  - image: images/lovestory/hangzhou/7.jpg
+    date: 2008/09
+    latitude: 30.27
+    longitude: 120.13
+    description: 相恋
+
+  - image: images/lovestory/hangzhou/8.jpg
+    date: 2008/05
+    latitude: 30.349
+    longitude: 119.520
+    description: 会争吵
+
+  - image: images/lovestory/hangzhou/9.jpg
+    date: 2008/07
+    latitude: 30.290
+    longitude: 120.173
+    description: 会撒娇
+
+  - image: images/lovestory/hangzhou/10.jpg
+    date: 2009/07
+    latitude: 30.351
+    longitude: 119.520
+    description: 更多时候，是不离不弃
+
+  - image: images/lovestory/hangzhou/11.jpg
+    date: 2010/04
+    latitude: 30.271
+    longitude: 120.140
+    description: 没钱的我问你是否愿意做我的小富婆
+
+story:
+  - 两个看似毫无关系的人
+  - 就这样相遇在西子湖畔
+  - 自习
+  - K 歌
+  - 毅行
+  - 到牵手
+  - 一路风雨
+  - 一路坎坷

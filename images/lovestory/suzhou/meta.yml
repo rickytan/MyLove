@@ -1,0 +1,39 @@
+# -*- mode: yaml; fill-column: 80 -*-
+---
+
+position:
+  latitude: 31.322089
+  longitude: 120.600249
+
+zoom: 11
+
+images:
+  - image: images/lovestory/suzhou/1.jpg
+    date: 2008/05
+    latitude: 31.322459
+    longitude: 120.599243
+    description: 留园
+
+  - image: images/lovestory/suzhou/2.jpg
+    date: 2008/05
+    latitude: 31.31709
+    longitude: 120.573276
+    description: 寒山寺
+
+  - image: images/lovestory/suzhou/3.jpg
+    date: 2008/05
+    latitude: 31.330271
+    longitude: 120.635554
+    description: 穿不进的衣服
+
+  - image: images/lovestory/suzhou/4.jpg
+    date: 2008/05
+    latitude: 31.322459
+    longitude: 120.599243
+    description: 两人在一起开心都重要
+
+story:
+  - 姑苏城外寒山寺
+  - 夜半钟声到客船
+  - 即使我们已经离开
+  - 涛声依旧拍着河岸
