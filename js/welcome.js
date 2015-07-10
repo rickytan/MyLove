@@ -41,7 +41,7 @@
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
         function x() {
-            $.when(nextStory()).then(x).fail(function(e) {
+            $.when(nextStory()).then(x).fail(function (e) {
                 console.error(e);
             });
         }
@@ -106,18 +106,22 @@
         function show() {
             if (images.length) {
                 var img = images.shift();
-                var loc = new google.maps.LatLng(img.latitude, img.longitude);
-                var info = new google.maps.InfoWindow({
-                    content: '<div class="info-image"><img src="' + img.image + '">' + '<p>' + img.description + '</p></div>',
-                    position: loc
-                });
-                map.panTo(loc);
-                new_marker(loc);
-                info.open(map);
-                setTimeout(function () {
-                    info.close(map);
-                    show();
-                }, timeout);
+                var preload = new Image();
+                preload.src = img.image;
+                preload.onload = function () {
+                    var loc = new google.maps.LatLng(img.latitude, img.longitude);
+                    var info = new google.maps.InfoWindow({
+                        content: '<div class="info-image"><img src="' + img.image + '">' + '<p>' + img.description + '</p></div>',
+                        position: loc
+                    });
+                    map.panTo(loc);
+                    new_marker(loc);
+                    info.open(map);
+                    setTimeout(function () {
+                        info.close(map);
+                        show();
+                    }, timeout);
+                };
             } else {
                 defer.resolve();
             }
