@@ -54,7 +54,7 @@ html, body {
     height: 100%;
     background: url(../images/bg.jpg) center 0 no-repeat no-repeat;
     background-size: cover;
-    padding-top: 160px;
+    padding-top: 80px;
     display: none;
 }
 
@@ -114,7 +114,7 @@ html, body {
 @media screen {
     .container {
         width: 1000px;
-        height: 800px;
+        height: 960px;
     }
     .left, .right {
         width: 480px;

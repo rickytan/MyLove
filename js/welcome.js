@@ -8,7 +8,7 @@
 
     var storyImagesPath = "/images/lovestory/";
     var stories = ["qiyang", "hangzhou", "hangzhou2",
-        "shaoxing", "suzhou", "wugongshan", "nanjing", "others", "huihanggudao", "yushandao", "xibei"];
+        "shaoxing", "suzhou", "wugongshan", "nanjing", "others", "huihanggudao", "yushandao", "xibei", "hangzhou3"];
     var storyMetas = [];
     var currentStory = 0;
 
@@ -70,7 +70,7 @@
 
             $.when(zoomToPosition(position, initial_zoom, meta.zoom)).then(function () {
                 var t = 2400 * meta.story.length / Math.max((meta.images || []).length, 1);
-                return $.when(showStoryCaption(meta.story), showImageStories(meta.images, t));
+                return $.when(showStoryCaption(meta.story), showImageStories(meta.images || [], t));
             }).then(function () {
                 return zoomToPosition(position, meta.zoom, initial_zoom);
             }).then(function () {
