@@ -122,6 +122,11 @@
                         show();
                     }, timeout);
                 };
+                preload.onerror = function() {
+                    setTimeout(function () {
+                        show();
+                    }, timeout);
+                };
             } else {
                 defer.resolve();
             }
