@@ -2,19 +2,20 @@ html, body {
     width: 100%;
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 .preload {
     position: absolute;
-    top: 240px;
+    bottom: 50%;
     left: 0;
     right: 0;
     text-align: center;
 }
 
 .preload span {
-    font-family: '宋体', 'Microsoft Yahei', sans-serif, serif;
-    font-size: 72px;
+    font-family: Georgia, sans-serif;
+    font-size: 88px;
     color: #ccc;
     margin-bottom: 0.5em;
 }
@@ -34,17 +35,20 @@ html, body {
 
 .info-image {
     overflow: visible;
+    padding: 0.5em;
+    max-height: 50%;
 }
 .info-image img {
     overflow: visible;
     width: 100%;
     height: auto;
-    border: 8px solid #fff;
-    border-radius: 6px;
-    box-shadow: 1px 1px 2px #333;
+    border: 4px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px #333;
     box-sizing: border-box;
 }
 .info-image p {
+    font-family: Georgia, 'KaiTi', 'Microsoft YaHei', '黑体', sans-serif;
     font-weight: bold;
     font-size: 24px;
     text-align: center;
@@ -82,8 +86,9 @@ html, body {
     display: inline-block;
     border-radius: 8px;
     color: #fff;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.6);
     padding: 0.5em;
+    font-family: Georgia, 'KaiTi', 'Microsoft YaHei', '黑体', sans-serif;
     font-size: 40px;
     text-shadow: 1px 1px 2px #333;
 }
@@ -113,8 +118,10 @@ html, body {
 
 @media screen {
     .container {
-        width: 1000px;
+        width: 1200px;
         height: 960px;
+        max-height: 88%;
+        max-width: 90%;
     }
     .left, .right {
         width: 480px;
@@ -124,22 +131,19 @@ html, body {
         top: 240px;
         //animation: hue 20s linear 0s infinite normal both;
         //-webkit-animation: hue 20s linear 0s infinite normal both;
-        background: #6666ff;
-        -webkit-text-fill-color: transparent;
+        color: #6666ff;
         -webkit-text-stroke: #000 4px;
     }
     .left {
         display: none;
         left: 0;
         text-align: right;
-        -webkit-background-clip: text;
         -webkit-animation: shake 2s ease-in-out 0s infinite;
     }
     .right {
         display: none;
         right: 0;
         text-align: left;
-        -webkit-background-clip: text;
         -webkit-animation: shake 2s ease-in-out 0s infinite;
     }
 }

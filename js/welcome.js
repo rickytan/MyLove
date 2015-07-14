@@ -5,10 +5,10 @@
     var map;
     var initial_zoom = 4;
     var initial_position = new google.maps.LatLng(39.908, 116.397); // Beijing
-
     var storyImagesPath = "/images/lovestory/";
     var stories = ["qiyang", "hangzhou", "hangzhou2",
         "shaoxing", "suzhou", "wugongshan", "nanjing", "others", "huihanggudao", "yushandao", "xibei", "hangzhou3"];
+    stories = ["hangzhou3"];
     var storyMetas = [];
     var currentStory = 0;
 
@@ -20,32 +20,6 @@
         $('.progress-bar').css({
             width: "" + (100 * currentStory / stories.length) + "%"
         });
-    }
-    function showMap() {
-        $('.preload').fadeOut(2000, function () {
-            $(this).remove();
-        });
-        $('.main').fadeIn(2000);
-
-        var mapOptions = {
-            zoom: initial_zoom,
-            maxZoom: 15,
-            minZoom: 3,
-            draggable: false,
-            disableDefaultUI: true,
-            disableDoubleClickZoom: true,
-            scrollwheel: false,
-            center: initial_position,
-            mapTypeId: google.maps.MapTypeId.HYBRID
-        };
-        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-        function x() {
-            $.when(nextStory()).then(x).fail(function (e) {
-                console.error(e);
-            });
-        }
-        x();
     }
     function loadStories() {
         if (currentStory < stories.length) {
@@ -78,11 +52,38 @@
             });
 
             return defer.promise();
-        } else {
+        } else if (currentStory++ === stories.length) {
             $('.left').show();
             $('.right').show();
-            throw "Over!";
+            return zoomToInit();
+        } else {
+            throw new Error("Over!");
         }
+    }
+    function showMap() {
+        $('.preload').fadeOut(2000, function () {
+            $(this).remove();
+        });
+        $('.main').fadeIn(2000);
+
+        var mapOptions = {
+            zoom: initial_zoom,
+            maxZoom: 15,
+            minZoom: 3,
+            draggable: false,
+            disableDefaultUI: true,
+            disableDoubleClickZoom: true,
+            scrollwheel: false,
+            center: initial_position,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        
+        (function begin() {
+            return nextStory().then(begin).fail(function(e) {
+                console.error(e);
+            });
+        })();
     }
 
     google.maps.event.addDomListener(window, 'load', loadStories);
@@ -122,7 +123,7 @@
                         show();
                     }, timeout);
                 };
-                preload.onerror = function() {
+                preload.onerror = function () {
                     setTimeout(function () {
                         show();
                     }, timeout);
@@ -141,10 +142,12 @@
 
         function text() {
             if (captions.length) {
-                $("#story-caption").text(captions.shift());
+                $("#story-caption").text(captions.shift()).fadeIn(500);
                 setTimeout(text, 2400);
             } else {
-                $("#story-caption").text("");
+                $("#story-caption").fadeOut(500, function() {
+                    $(this).text("");
+                });
                 defer.resolve();
             }
         }
@@ -156,7 +159,7 @@
     function zoomToPosition(position, zoomStart, zoomEnd) {
         var defer = $.Deferred();
         // if zoomEnd is null, zoom from current zoom level to zoomStart, treat zoomStart as zoomEnd zoom.
-        if (zoomEnd == null) {
+        if (!zoomEnd) {
             zoomEnd = zoomStart;
             zoomStart = map.getZoom();
         }
@@ -177,19 +180,23 @@
         return defer.promise();
     }
 
-    function zoomToInit(speed) {
-        if (speed == null)
-            zoomToPosition(initial_position, initial_zoom);
-        else
-            zoomToPosition(initial_position, initial_zoom);
+    function zoomToInit() {
+        return zoomToPosition(initial_position, initial_zoom);
     }
 // Google Analytics: change UA-XXXXX-X to be your site's ID.
-    setTimeout(function() {
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-41902529-2', 'auto');
-ga('send', 'pageview');
+    setTimeout(function () {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-41902529-2', 'auto');
+        ga('send', 'pageview');
     }, 1000);
 })();
