@@ -8,7 +8,6 @@
     var storyImagesPath = "/images/lovestory/";
     var stories = ["qiyang", "hangzhou", "hangzhou2",
         "shaoxing", "suzhou", "wugongshan", "nanjing", "others", "huihanggudao", "yushandao", "xibei", "hangzhou3"];
-    stories = ["hangzhou3"];
     var storyMetas = [];
     var currentStory = 0;
 
