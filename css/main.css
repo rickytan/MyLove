@@ -131,19 +131,49 @@ html, body {
         top: 240px;
         //animation: hue 20s linear 0s infinite normal both;
         //-webkit-animation: hue 20s linear 0s infinite normal both;
-        color: #6666ff;
-        -webkit-text-stroke: #000 4px;
+        color: #ff6600;
+        -webkit-text-stroke: #000 1px;
+        font-family: Georgia, 'KaiTi', 'Microsoft YaHei', '黑体', sans-serif;
     }
     .left {
         display: none;
         left: 0;
         text-align: right;
+        animation: shake 2s ease-in-out 0s infinite;
         -webkit-animation: shake 2s ease-in-out 0s infinite;
     }
     .right {
         display: none;
         right: 0;
         text-align: left;
+        animation: shake 2s ease-in-out 0s infinite;
         -webkit-animation: shake 2s ease-in-out 0s infinite;
+    }
+}
+
+@media (max-width: 1640px) {
+    .left, .right {
+        width: 320px;
+        font-size: 200px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .left, .right {
+        width: 160px;
+        font-size: 160px;
+    }
+}
+
+@media (max-width: 800px) {
+    .left, .right {
+        width: 120px;
+        font-size: 120px;
+    }
+}
+
+@media (max-height: 800px) {
+    .left, .right {
+        top: 120px;
     }
 }
