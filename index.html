@@ -18,7 +18,10 @@
   <!--[if lt IE 8]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-  <audio src="bg.mp3" autoplay loop="loop" autobuffer></audio>
+  <audio id="bgm" src="bg.mp3" autoplay="autoplay" preload="auto" loop="loop">
+    <source src="bg.mp3" type="audio/mpeg" />
+    <source src="bg.ogg" type="audio/ogg" />
+  </audio>
   <div class="preload">
     <span>Loading...</span>
     <div class="progress">
@@ -26,6 +29,9 @@
     </div>
   </div>
   <div class="main">
+    <div class="text-center">
+      <h2>如果没有声音，请点击屏幕任意位置！</h2>
+    </div>
     <div class="container">
       <div id="map-canvas"></div>
       <div class="text-center caption">
