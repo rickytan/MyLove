@@ -5,13 +5,15 @@ body {
   margin: 0;
 }
 h2 {
-  font-size: 32pt;
+  font-size: 16pt;
   padding: 0.5em;
   text-align: center;
   border-radius: 8px;
   margin: 0;
   text-decoration: none;
   color: #2af;
+  position: relative;
+  top: -100%;
 }
 .preload {
   position: absolute;
@@ -53,7 +55,7 @@ h2 {
   box-sizing: border-box;
 }
 .info-image p {
-  font-family: Georgia, 'KaiTi', 'Microsoft YaHei', '黑体', sans-serif;
+  font-family: Georgia, 'KaiTi', '楷体', 'Microsoft YaHei', 'Heiti', '黑体', sans-serif;
   font-weight: bold;
   font-size: 24px;
   text-align: center;
@@ -63,7 +65,7 @@ h2 {
   height: 100%;
   background: url(../images/bg.jpg) center 0 no-repeat no-repeat;
   background-size: cover;
-  padding-top: 80px;
+  padding-top: 32px;
   display: none;
 }
 .container {
@@ -90,9 +92,31 @@ h2 {
   color: #fff;
   background: rgba(0, 0, 0, 0.6);
   padding: 0.5em;
-  font-family: Georgia, 'KaiTi', 'Microsoft YaHei', '黑体', sans-serif;
+  font-family: Georgia, 'KaiTi', '楷体', 'Microsoft YaHei', 'Heiti', '黑体', sans-serif;
   font-size: 40px;
   text-shadow: 1px 1px 2px #333;
+}
+@-webkit-keyframes hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(180deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+@-moz-keyframes hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(180deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+  }
 }
 @keyframes hue {
   0% {
@@ -103,6 +127,28 @@ h2 {
   }
   100% {
     -webkit-filter: hue-rotate(360deg);
+  }
+}
+@-webkit-keyframes shake {
+  from {
+    transform: translatex(-20px);
+  }
+  50% {
+    transform: translate(20px);
+  }
+  to {
+    transform: translate(-20px);
+  }
+}
+@-moz-keyframes shake {
+  from {
+    transform: translatex(-20px);
+  }
+  50% {
+    transform: translate(20px);
+  }
+  to {
+    transform: translate(-20px);
   }
 }
 @keyframes shake {
@@ -134,7 +180,7 @@ h2 {
     //-webkit-animation: hue 20s linear 0s infinite normal both;
     color: #ff6600;
     -webkit-text-stroke: #000 1px;
-    font-family: Georgia, 'KaiTi', 'Microsoft YaHei', '黑体', sans-serif;
+    font-family: Georgia, 'KaiTi', '楷体', 'Microsoft YaHei', 'Heiti', '黑体', sans-serif;
   }
   .left {
     display: none;
@@ -142,6 +188,7 @@ h2 {
     text-align: right;
     animation: shake 2s ease-in-out 0s infinite;
     -webkit-animation: shake 2s ease-in-out 0s infinite;
+    -moz-animation: shake 2s ease-in-out 0s infinite;
   }
   .right {
     display: none;
@@ -149,6 +196,7 @@ h2 {
     text-align: left;
     animation: shake 2s ease-in-out 0s infinite;
     -webkit-animation: shake 2s ease-in-out 0s infinite;
+    -moz-animation: shake 2s ease-in-out 0s infinite;
   }
 }
 @media (max-width: 1640px) {
